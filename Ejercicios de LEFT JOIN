@@ -1,0 +1,7 @@
+#Retorna todos los alquileres con su información de pago respectivo. si es que existe
+SELECT	
+	payment.payment_id,
+	amount,
+	payment.customer_id
+FROM rental LEFT JOIN payment
+ON payment.customer_id = rental.customer_id
